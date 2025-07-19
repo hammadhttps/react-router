@@ -9,12 +9,14 @@ import Contact from './pages/Contact'
    return (
      <div>
       <Navbar/>
+       <div className='container'>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/Product' element={<Product/>} />
         <Route path='/About' element={<About/>} />
         <Route path='/Contact' element={<Contact/>} />
       </Routes>
+      </div>
      </div>
    )
  }
