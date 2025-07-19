@@ -13,7 +13,7 @@ const Navbar = () => {
            <NavLink to='/about'> <li>About</li></NavLink>
            <NavLink to='/contact'> <li>Contact</li></NavLink>
         </ul>
-        <button onClick={()=>navigate('/about')}>Get Started</button>
+        <button onClick={()=>navigate('/about',{replace:true})}>Get Started</button>
     </div>
   )
 }

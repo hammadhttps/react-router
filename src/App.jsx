@@ -6,6 +6,9 @@ import About from './pages/About'
 import Contact from './pages/Contact'
  import { RouterProvider,Route, createBrowserRouter, createRoutesFromElements } from 'react-router'
 import RootLayout from './Layout/RootLayout'
+import ContactLayout from './Layout/ContactLayout'
+import Info from './components/Info'
+import Form from './components/Form'
  const App = () => {
 
   const router=createBrowserRouter(
@@ -14,7 +17,10 @@ import RootLayout from './Layout/RootLayout'
           <Route index element={<Home/>} />
           <Route path="product" element={<Product/>} />
           <Route path="about" element={<About/>} />
-          <Route path="contact" element={<Contact/>} />
+          <Route path="contact" element={<ContactLayout/>} >
+                <Route path='info' element={<Info/>}/>
+                <Route path='form' element={<Form/>}/>
+          </Route>
         </Route>
       
     )
