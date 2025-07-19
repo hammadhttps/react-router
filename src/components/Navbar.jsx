@@ -1,14 +1,13 @@
-import React from 'react'
-
+import { Link } from "react-router"
 const Navbar = () => {
   return (
     <div className='navbar'>
         <img src="hh" alt="logo Image" />
         <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <li>About</li>
-            <li>Contact</li>
+           <Link to='/'><li>Home</li></Link>
+            <Link to='/product'> <li>Products</li></Link>
+           <Link to='/about'> <li>About</li></Link>
+           <Link to='/contact'> <li>Contact</li></Link>
         </ul>
         <button>Get Started</button>
     </div>
