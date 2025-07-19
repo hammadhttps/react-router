@@ -58,4 +58,11 @@ a.active
   color:rgb(187, 166, 166);
 }
 
+.contact-buttons
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
