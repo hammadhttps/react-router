@@ -53,4 +53,9 @@
   font-weight: 500;
 }
 
+a.active
+{
+  color:rgb(187, 166, 166);
+}
+
 

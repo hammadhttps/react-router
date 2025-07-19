@@ -1,15 +1,19 @@
 import { Link } from "react-router"
+import { NavLink,useNavigate } from "react-router"
 const Navbar = () => {
+
+  const navigate=useNavigate();
+
   return (
     <div className='navbar'>
         <img src="hh" alt="logo Image" />
         <ul>
-           <Link to='/'><li>Home</li></Link>
-            <Link to='/product'> <li>Products</li></Link>
-           <Link to='/about'> <li>About</li></Link>
-           <Link to='/contact'> <li>Contact</li></Link>
+           <NavLink to='/'><li>Home</li></NavLink>
+            <NavLink to='/product'> <li>Products</li></NavLink>
+           <NavLink to='/about'> <li>About</li></NavLink>
+           <NavLink to='/contact'> <li>Contact</li></NavLink>
         </ul>
-        <button>Get Started</button>
+        <button onClick={()=>navigate('/about')}>Get Started</button>
     </div>
   )
 }
