@@ -10,6 +10,8 @@ import ContactLayout from './Layout/ContactLayout'
 import Info from './components/Info'
 import Form from './components/Form'
 import NotFound from './components/NotFound'
+import JobsLayout from './Layout/JobsLayout'
+import Jobs, { jobs_Loader } from './pages/Jobs'
  const App = () => {
 
   const router=createBrowserRouter(
@@ -21,6 +23,11 @@ import NotFound from './components/NotFound'
           <Route path="contact" element={<ContactLayout/>} >
                 <Route path='info' element={<Info/>}/>
                 <Route path='form' element={<Form/>}/>
+          </Route>
+          <Route>
+            <Route path='jobs' element={<JobsLayout/>}/>
+            <Route index element={<Jobs/>} 
+            loader={jobs_Loader}/>
           </Route>
           <Route path='*' element={<NotFound/>}/>
         </Route>
