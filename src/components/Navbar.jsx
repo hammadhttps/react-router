@@ -1,22 +1,57 @@
-import { Link } from "react-router"
-import { NavLink,useNavigate } from "react-router"
-const Navbar = () => {
+import { NavLink, useNavigate } from "react-router";
+import { Home, Package, Info, Phone, Briefcase, Sparkles } from "lucide-react";
 
-  const navigate=useNavigate();
+const Navbar = () => {
+  const navigate = useNavigate();
 
   return (
-    <div className='navbar'>
-        <img src="hh" alt="logo Image" />
-        <ul>
-           <NavLink to='/'><li>Home</li></NavLink>
-            <NavLink to='/product'> <li>Products</li></NavLink>
-           <NavLink to='/about'> <li>About</li></NavLink>
-           <NavLink to='/contact'> <li>Contact</li></NavLink>
-            <NavLink to='/jobs'> <li>Jobs</li></NavLink>
-        </ul>
-        <button onClick={()=>navigate('/about',{replace:true})}>Get Started</button>
-    </div>
-  )
-}
+    <nav className="navbar">
+      <NavLink to="/" className="navbar-brand">
+        <Sparkles size={28} />
+        TechCorp
+      </NavLink>
+      
+      <ul>
+        <li>
+          <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+            <Home size={18} />
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/product" className={({ isActive }) => isActive ? 'active' : ''}>
+            <Package size={18} />
+            Products
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
+            <Info size={18} />
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
+            <Phone size={18} />
+            Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/jobs" className={({ isActive }) => isActive ? 'active' : ''}>
+            <Briefcase size={18} />
+            Careers
+          </NavLink>
+        </li>
+      </ul>
+      
+      <button 
+        className="navbar-cta"
+        onClick={() => navigate('/contact', { replace: true })}
+      >
+        Get Started
+      </button>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
