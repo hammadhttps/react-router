@@ -12,6 +12,7 @@ import Form from './components/Form'
 import NotFound from './components/NotFound'
 import JobsLayout from './Layout/JobsLayout'
 import Jobs, { jobs_Loader } from './pages/Jobs'
+import JobsDetails, { job_Details_Loader } from './components/JobsDetails'
  const App = () => {
 
   const router=createBrowserRouter(
@@ -24,11 +25,12 @@ import Jobs, { jobs_Loader } from './pages/Jobs'
                 <Route path='info' element={<Info/>}/>
                 <Route path='form' element={<Form/>}/>
           </Route>
-          <Route>
-            <Route path='jobs' element={<JobsLayout/>}/>
+          
+            <Route path='jobs' element={<JobsLayout/>}>
             <Route index element={<Jobs/>} 
             loader={jobs_Loader}/>
-          </Route>
+            <Route path=':id' element={<JobsDetails/>} loader={job_Details_Loader}/>
+            </Route>
           <Route path='*' element={<NotFound/>}/>
         </Route>
       
