@@ -242,7 +242,7 @@ const Form = () => {
           <div className="bg-neutral-50 border border-neutral-200 rounded-lg p-4 mb-6">
             <p className="text-sm text-neutral-600">
               <strong>Privacy Notice:</strong> By submitting this form, you agree to our privacy policy. 
-              We'll only use your information to respond to your inquiry and won't share it with third parties.
+              We'll only use your information to respond to your inquiry and won\'t share it with third parties.
             </p>
           </div>
 
