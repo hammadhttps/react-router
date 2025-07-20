@@ -2,27 +2,67 @@
   "jobs": [
     {
       "id": 1,
-      "title": "Job 1",
-      "salary": 60000,
-      "location": "UK"
+      "title": "Senior Frontend Developer",
+      "salary": 120000,
+      "location": "San Francisco, CA",
+      "department": "Engineering",
+      "type": "Full-time",
+      "remote": true,
+      "description": "Join our frontend team to build cutting-edge user interfaces using React and modern web technologies.",
+      "requirements": [
+        "5+ years of React experience",
+        "Strong TypeScript skills",
+        "Experience with modern build tools",
+        "Knowledge of responsive design"
+      ]
     },
     {
       "id": 2,
-      "title": "Job 1",
-      "salary": 60000,
-      "location": "UK"
+      "title": "Backend Engineer",
+      "salary": 115000,
+      "location": "Remote",
+      "department": "Engineering",
+      "type": "Full-time",
+      "remote": true,
+      "description": "Build scalable backend services and APIs that power our platform.",
+      "requirements": [
+        "Experience with Node.js or Python",
+        "Database design and optimization",
+        "API design and development",
+        "Cloud platform experience"
+      ]
     },
     {
       "id": 3,
-      "title": "Job 1",
-      "salary": 60000,
-      "location": "UK"
+      "title": "Product Manager",
+      "salary": 140000,
+      "location": "New York, NY",
+      "department": "Product",
+      "type": "Full-time",
+      "remote": false,
+      "description": "Lead product strategy and work with engineering teams to deliver exceptional user experiences.",
+      "requirements": [
+        "3+ years of product management experience",
+        "Strong analytical skills",
+        "Experience with agile methodologies",
+        "Excellent communication skills"
+      ]
     },
     {
       "id": 4,
-      "title": "Job 1",
-      "salary": 60000,
-      "location": "UK"
+      "title": "UX Designer",
+      "salary": 95000,
+      "location": "Austin, TX",
+      "department": "Design",
+      "type": "Full-time",
+      "remote": true,
+      "description": "Create intuitive and beautiful user experiences for our enterprise software platform.",
+      "requirements": [
+        "Portfolio demonstrating UX design skills",
+        "Proficiency in design tools (Figma, Sketch)",
+        "User research and testing experience",
+        "Understanding of design systems"
+      ]
     }
   ]
 }
