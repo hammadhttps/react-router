@@ -13,6 +13,7 @@ import NotFound from './components/NotFound'
 import JobsLayout from './Layout/JobsLayout'
 import Jobs, { jobs_Loader } from './pages/Jobs'
 import JobsDetails, { job_Details_Loader } from './components/JobsDetails'
+import ErorPage from './components/ErorPage'
  const App = () => {
 
   const router=createBrowserRouter(
@@ -29,7 +30,8 @@ import JobsDetails, { job_Details_Loader } from './components/JobsDetails'
             <Route path='jobs' element={<JobsLayout/>}>
             <Route index element={<Jobs/>} 
             loader={jobs_Loader}/>
-            <Route path=':id' element={<JobsDetails/>} loader={job_Details_Loader}/>
+            <Route path=':id' element={<JobsDetails/>} loader={job_Details_Loader} errorElement={<ErorPage/>}/>
+
             </Route>
           <Route path='*' element={<NotFound/>}/>
         </Route>

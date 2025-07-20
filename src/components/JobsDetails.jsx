@@ -18,5 +18,9 @@ export const job_Details_Loader=async({params})=>{
 
     const {id}=params;
     const res=await fetch("http://localhost:5000/jobs/"+id)
+    if(!res.ok)
+    {
+        throw Error ("Could not found the JOb Details")
+    }
      return res.json();
 }
