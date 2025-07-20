@@ -9,6 +9,7 @@ import RootLayout from './Layout/RootLayout'
 import ContactLayout from './Layout/ContactLayout'
 import Info from './components/Info'
 import Form from './components/Form'
+import NotFound from './components/NotFound'
  const App = () => {
 
   const router=createBrowserRouter(
@@ -21,6 +22,7 @@ import Form from './components/Form'
                 <Route path='info' element={<Info/>}/>
                 <Route path='form' element={<Form/>}/>
           </Route>
+          <Route path='*' element={<NotFound/>}/>
         </Route>
       
     )
